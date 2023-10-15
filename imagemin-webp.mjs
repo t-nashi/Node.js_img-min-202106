@@ -1,5 +1,5 @@
-const imagemin = require('imagemin-keep-folder');
-const imageminWebp = require('imagemin-webp');
+import imagemin from 'imagemin-keep-folder';
+import imageminWebp from 'imagemin-webp';
 
 const paths = {
   srcDir : './src',				// 処理前

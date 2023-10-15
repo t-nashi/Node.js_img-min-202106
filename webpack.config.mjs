@@ -1,6 +1,12 @@
-const CopyPlugin = require("copy-webpack-plugin");                              // ファイルのコピー
-const ImageminPlugin = require('imagemin-webpack-plugin').default;              // 画像圧縮（jpe?g|png|gif|svg）
-const ImageminMozjpeg = require('imagemin-mozjpeg');                            // jpg圧縮
+import CopyPlugin from 'copy-webpack-plugin';                              // ファイルのコピー
+import ImageminPlugin from 'imagemin-webpack-plugin';              // 画像圧縮（jpe?g|png|gif|svg）
+import ImageminMozjpeg from 'imagemin-mozjpeg';                            // jpg圧縮
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 // [定数] webpack の出力オプションを指定します
 // 'production' か 'development' を指定
@@ -9,7 +15,7 @@ const MODE = "production";
 // ソースマップの利用有無(productionのときはソースマップを利用しない)
 const enabledSourceMap = MODE === "development";
 
-module.exports = {
+export default {
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
   mode: MODE,
