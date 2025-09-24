@@ -22,9 +22,9 @@
 	"author": "t-nashi",
 	"license": "MIT",
 	"devDependencies": {
-		"@img/sharp-win32-x64": "^0.34.4",
 		"chokidar": "^4.0.3",
 		"copy-webpack-plugin": "^13.0.1",
+		"cross-env": "^10.0.0",
 		"file-loader": "^6.2.0",
 		"fs": "^0.0.1-security",
 		"fs-extra": "^11.3.2",
